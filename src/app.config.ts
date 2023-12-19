@@ -13,6 +13,7 @@ import { HorarioDB } from "./models/horarios";
 export const AppDataSource = new DataSource({
     type: "postgres",
     url: process.env.DB_URL,
+    ssl: true,
     synchronize: true,
     logging: false,
     entities: [personaDB, UsuarioDB, CargoDB, TardanzaDB, AsistenciaDB, FaltasDB, ControlAsistenciaGeneralDB, EmpresaDb, TurnoDB, HorarioDB],
